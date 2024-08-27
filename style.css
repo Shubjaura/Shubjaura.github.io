@@ -35,10 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .teams, .contact, footer, .Experience, .education {
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
+.Experience .about-experience,
 .services .serv-content,
 .skills .skills-content,
 .contact .contact-content{
@@ -52,8 +53,8 @@ section .title{
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
     font-family: 'Ubuntu', sans-serif;
 }
 section .title::before{
@@ -87,8 +88,9 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .navbar.sticky{
-    padding: 15px 0;
-    background: rgb(21, 228, 239);
+    padding: 10px 0;
+    /* background: rgb(21, 228, 239); */
+    background: rgb(0, 0, 0);
 }
 .navbar .max-width{
     display: flex;
@@ -129,15 +131,16 @@ section .title::after{
 /* menu btn styling */
 .menu-btn{
     color: #fff;
-    font-size: 23px;
+    font-size: 20px;
     cursor: pointer;
     display: none;
 }
 .scroll-up-btn{
     position: fixed;
-    height: 45px;
+    height: 30px;
     width: 42px;
-    background: rgb(21, 228, 239);
+    /* background: rgb(21, 228, 239); */
+    background: bal;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -147,7 +150,7 @@ section .title::after{
     font-size: 30px;
     border-radius: 6px;
     border-bottom-width: 2px;
-    cursor: pointer;
+    /* cursor: pointer; */
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -168,7 +171,7 @@ section .title::after{
     background: url("images/banner.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
-    min-height: 500px;
+    min-height: 300px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
@@ -176,12 +179,29 @@ section .title::after{
 .home .max-width{
   width: 100%;
   display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /
 }
-.home .max-width .row{
-  margin-right: 0;
+.home .max-width .row {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10%; /* Adjust this value to move the content up or down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+.home .home-content {
+    text-align: center;
+    margin-top: -50px; /* Adjust this value to move the content up */
 }
+
 .home .home-content .text-1{
-    font-size: 27px;
+    font-size: 15px;
 }
 .home .home-content .text-2{
     font-size: 75px;
@@ -189,12 +209,12 @@ section .title::after{
     margin-left: -3px;
 }
 .home .home-content .text-3{
-    font-size: 40px;
+    font-size: 20px;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
     color: rgb(21, 228, 239);
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 /* about section styling */
@@ -205,30 +225,89 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
-    width: 400px;
+    height: 370px;
+    width: 370px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 50%;
 }
 .about .about-content .right{
     width: 55%;
 }
-.about .about-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about .about-content .right .text span{
-    color: rgb(21, 228, 239);
-}
+
 .about .about-content .right p{
+    font-size: 15px;
+    color: rgb(196, 202, 203);
     text-align: justify;
+}
+
+/*   experience  */
+
+
+.Experience .about-experience .left{
+    width: 45%;
+}
+.Experience .about-experience .left img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.Experience .about-experience .right{
+    width: 55%;
+}
+
+.Experience .about-experience .right .text{
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    text-align: justify;
+}
+
+.Experience .about-experience .right p{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+/* Education */
+
+
+.education .about-education{
+    width: 100%;
+}
+
+.education .about-education .text {
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    font-size: 35px;
+    color: rgb(21, 228, 239);
+    font-weight: 400;
+    text-align: center; /* Aligns the text within the flex container */
+}
+
+
+.education .about-education .text1 {
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-align: center; /* Aligns the text within the flex container */
 }
 
 /* services section styling */
 .contact, .about{
     color:#fff;
     background: rgb(56, 53, 53);
+}
+
+.education{
+    background: url("images/banner.jpg") no-repeat center;
+    height: 50vh;
+    color: #fff;
+    min-height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .teams .carousel .card:hover img{
@@ -354,6 +433,11 @@ section .title::after{
         height: 350px;
         width: 350px;
     }
+
+    .Experience .about-experience .left img{
+        height: 350px;
+        width: 350px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -411,11 +495,19 @@ section .title::after{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
+
+    .Experience .about-experience .column{
+        width: 100%;
     }
-    .skills .skills-content .column,
+    .Experience .about-experience .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .Experience .about-experience .right{
+        flex: 100%;
+    }
+skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
@@ -446,7 +538,7 @@ section .title::after{
         font-size: 27px;
     }
     .about .about-content .right .text,
-    .skills .skills-content .left .text{
+    .Experience .about-experience .right .text{
         font-size: 19px;
     }
     .contact .right form .fields{
