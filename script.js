@@ -90,9 +90,9 @@ $(document).ready(function(){
 
 function sendmail(){
     var params = {
-        from_name : document.getElementbyId("full_name").value;
-        reply_to: document.getElementbyId("email_id").value;
-        message: document.getElementbyId("email_message").value;
+        from_name : document.getElementbyId("full_name").value,
+        reply_to: document.getElementbyId("email_id").value,
+        message: document.getElementbyId("email_message").value,
     }
     emailjs.sendForm("service_4j0u6qp", "template_ph9376b", params).then(function(res){
         alert("Success!");
