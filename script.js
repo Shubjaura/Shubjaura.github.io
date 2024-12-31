@@ -71,3 +71,19 @@ $(document).ready(function(){
         }
     });
 });
+
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Initialize EmailJS (only needed for older configurations)
+    // emailjs.init("YOUR_PUBLIC_KEY"); 
+
+    // Send form data via EmailJS
+    emailjs.sendForm("service_4j0u6qp", "template_hwuzf7x", this)
+        .then(function() {
+            alert("Message sent successfully!");
+        }, function(error) {
+            alert("Failed to send message. Please try again later.");
+            console.error("Error:", error);
+        });
+});
