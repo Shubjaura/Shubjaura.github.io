@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -194,7 +195,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                        <form action="https://formspree.io/f/your_form_id" method="POST">
+                        <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
                             <div class="fields">
                                 <div class="field name">
                                     <input type="text" name="name" placeholder="Name" required>
