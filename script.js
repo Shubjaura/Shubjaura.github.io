@@ -79,7 +79,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     // emailjs.init("YOUR_PUBLIC_KEY"); 
 
     // Send form data via EmailJS
-    emailjs.sendForm("service_4j0u6qp", "template_hwuzf7x", this)
+    emailjs.sendForm("service_4j0u6qp", "template_ph9376b", this)
         .then(function() {
             alert("Message sent successfully!");
         }, function(error) {
