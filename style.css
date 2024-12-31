@@ -77,6 +77,13 @@ section .title::after{
     background: #fff;
     transform: translateX(-50%);
 }
+code {
+            color: #d63384; /* Set text color */
+            background-color: #f8f9fa; /* Optional: Add background color */
+            padding: 2px 4px; /* Optional: Add padding */
+            border-radius: 3px; /* Optional: Add rounded corners */
+            font-family: Consolas, "Courier New", monospace; /* Set font to monospace */
+}
 
 /* navbar styling */
 .navbar{
