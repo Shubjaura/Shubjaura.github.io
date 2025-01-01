@@ -1,12 +1,36 @@
-function sendmail(){
+function areAllVarsPopulated(var1, var2, var3, var4) {
+    return [var1, var2, var3, var4].every(value => value !== null && value !== '');
+}
+
+function isValidEmail(email) {
+    return email.includes('@'); // Checks if the email contains '@'
+}
+
+function sendmail() {
     let params = {
-        message : document.getElementById("email_message").value,
+        message: document.getElementById("email_message").value,
         subject: document.getElementById("subject").value,
         sendername: document.getElementById("full_name").value,
         replyto: document.getElementById("email_id").value,
+    };
+
+    // Extract values from the params object
+    const { message, subject, sendername, replyto } = params;
+
+    if (areAllVarsPopulated(message, subject, sendername, replyto)) {
+        if (isValidEmail(replyto)) {
+            console.log("Params object:", JSON.stringify(params));
+            emailjs.send("service_4j0u6qp", "template_ph9376b", params).then(() => {
+                alert("The Message is sent!");
+            }).catch(error => {
+                console.error("Failed to send email:", error);
+            });
+        } else {
+            alert("Please enter a valid email address containing '@'.");
+        }
+    } else {
+        alert("Please fill in all required fields.");
     }
-    console.log("Params object:", JSON.stringify(params));
-    emailjs.send("service_4j0u6qp", "template_ph9376b", params).then(alert("The Message is sent!"))
 }
 
 $(document).ready(function(){
