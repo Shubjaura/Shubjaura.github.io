@@ -894,14 +894,13 @@ skills .skills-content .column,
 }
 
 
-/* Award Image */
 .gallery-item img {
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 250px; /* Limit the height for consistency */
-    object-fit: contain; /* Ensure the image fits within the box */
-    margin-bottom: 10px;
+    width: 100%; /* Ensures the image scales with the container */
+    height: 250px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Crops the image to fit the dimensions */
+    max-height: 250px; /* Limit the maximum height */
     border-radius: 8px; /* Add slight rounding to images */
+    margin-bottom: 10px;
 }
 
 /* Hover Effects */
