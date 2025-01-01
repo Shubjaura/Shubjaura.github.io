@@ -132,7 +132,7 @@ code {
     color: rgb(21, 228, 239);
 }
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color:  rgb(21, 228, 239);
 }
 
 /* menu btn styling */
@@ -940,4 +940,14 @@ skills .skills-content .column,
     .gallery-item h3 {
         font-size: 16px; /* Reduce font size */
     }
+}
+
+.navbar .menu li a.active {
+    color: rgb(21, 228, 239);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(21, 228, 239);
+}
+
+.navbar .menu li a:hover {
+    color: rgb(21, 228, 239);
 }
