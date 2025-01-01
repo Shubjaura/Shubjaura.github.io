@@ -254,8 +254,8 @@ code {
     width: 45%;
 }
 .Experience .about-experience .left img{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -566,4 +566,39 @@ skills .skills-content .column,
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+.Experience .about-experience {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+    transform-origin: center; /* Keeps scaling centered */
+}
+
+.Experience .about-experience:hover {
+    transform: scale(1.03); /* Slight enlargement without affecting layout */
+    background-color: #ffffff; /* Brighter but subtle */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.Experience .about-experience .left img {
+    transition: transform 0.3s ease; /* Smooth image scaling */
+}
+
+.Experience .about-experience:hover .left img {
+    transform: scale(1.08); /* Subtle image zoom */
+}
+
+.Experience .about-experience {
+    padding: 20px;
+    border-radius: 10px; /* Optional: Rounded corners for a modern look */
+}
+
+.Experience .about-experience {
+    background-color: #f8f9fa; /* Default color */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Experience .about-experience:hover {
+    background-color: #ffffff; /* Subtle brightness on hover */
+    background-image: linear-gradient(120deg, #ffffff, #f9f9f9);
 }
