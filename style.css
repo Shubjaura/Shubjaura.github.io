@@ -951,3 +951,12 @@ skills .skills-content .column,
 .navbar .menu li a:hover {
     color: rgb(21, 228, 239);
 }
+
+
+@media (max-width: 768px) {
+    .home {
+        background: url("images/banner.jpg") no-repeat center center;
+        background-size: contain; /* Ensure the image fits within the container */
+        height: 80vh; /* Adjust the height for smaller screens */
+    }
+}
