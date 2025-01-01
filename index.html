@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init("wnHNEzZ3In-KGxsIH");
@@ -91,7 +91,7 @@
                     <p style="margin-bottom: 10px;"> 1. &emsp; Designed and implemented a scalable <code>RAG chatbot</code> leveraging  Google's LLM <code>Gemini Pro 1.5</code> and <code>Vertex AI</code>, integrating distributed processing with PySpark to deliver high-performance NLP solutions that offer low latency. </p>
                     <p style="margin-bottom: 10px;"> 2.  &emsp; Leveraged <code>GCP BigQuery, SQL,</code> and <code>Python</code> to extract financial data and applied <code>prompt engineering (few-shot, contextual)</code> with Gemini Pro fine-tuning to generate high-quality financial summaries. </p>
                     <p style="margin-bottom: 20px;"> 3. &emsp; Leveraged multi-threading with <code>ThreadPoolExecutor</code> to parallelize summary generation, reducing time by 40% </p>
-</p>
+                    </p>
                 </div>
             </div>
 
@@ -200,7 +200,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                        <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+                        <form>
                             <div class="fields">
                                 <div class="field name">
                                     <input type="text" id="full_name" placeholder="Name" required>
@@ -216,7 +216,7 @@
                                 <textarea id="email_message" cols="30" rows="10" placeholder="Message.." required></textarea>
                             </div>
                             <div class="button-area">
-                                <button onclick="sendmail()">Send message</button>
+                                <button type = "submit" onclick="sendmail()">Send message</button>
                             </div>
                         </form>
                     </div>
@@ -224,9 +224,6 @@
             </div>
         </div>
     </section>
-
-    <!-- footer section start -->
-
     <script src="script.js"></script>
 </body>
 </html>

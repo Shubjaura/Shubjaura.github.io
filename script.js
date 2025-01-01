@@ -1,3 +1,14 @@
+function sendmail(){
+    let params = {
+        message : document.getElementById("email_message").value,
+        subject: document.getElementById("subject").value,
+        sendername: document.getElementById("full_name").value,
+        replyto: document.getElementById("email_id").value,
+    }
+    console.log("Params object:", JSON.stringify(params));
+    emailjs.send("service_4j0u6qp", "template_ph9376b", params).then(alert("The Message is sent!"))
+}
+
 $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script
@@ -87,14 +98,3 @@ $(document).ready(function(){
 //             alert("Failed to send message. Please try again later.");
 //         });
 // });
-
-function sendmail(){
-    var params = {
-        from_name : document.getElementbyId("full_name").value,
-        reply_to: document.getElementbyId("email_id").value,
-        message: document.getElementbyId("email_message").value
-    }
-    emailjs.sendForm("service_4j0u6qp", "template_ph9376b", params).then(function(res){
-        alert("Success!");
-    })
-}
