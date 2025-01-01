@@ -602,3 +602,33 @@ skills .skills-content .column,
     background-color: #ffffff; /* Subtle brightness on hover */
     background-image: linear-gradient(120deg, #ffffff, #f9f9f9);
 }
+
+.about-experience {
+    position: relative; /* For positioning the bulb icon */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bulb-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: rgba(255, 223, 0, 0); /* Hidden initially */
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.about-experience:hover .bulb-icon {
+    color: rgba(255, 223, 0, 1); /* Bright yellow on hover */
+    transform: scale(1.2); /* Slight enlargement */
+}
+
+.about-experience .right {
+    transition: background-color 0.3s ease; /* Smooth transition for lighting effect */
+}
+
+.about-experience:hover .right {
+    background-color: rgba(255, 223, 0, 0.1); /* Subtle yellow glow */
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.2); /* Optional: Glow effect */
+}
+
