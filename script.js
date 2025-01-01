@@ -82,19 +82,3 @@ $(document).ready(function(){
         }
     });
 });
-
-// Contact form handling with EmailJS
-// document.querySelector("#contact-form").addEventListener("submit", function(event) {
-//     event.preventDefault(); // Prevent default form submission
-
-//     console.log("Form submission started...");
-
-//     emailjs.sendForm("service_4j0u6qp", "template_ph9376b", this)
-//         .then(function(response) {
-//             console.log("SUCCESS!", response.status, response.text);
-//             alert("Message sent successfully!");
-//         }, function(error) {
-//             console.error("FAILED...", error);
-//             alert("Failed to send message. Please try again later.");
-//         });
-// });
