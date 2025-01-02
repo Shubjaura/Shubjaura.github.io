@@ -631,23 +631,25 @@ skills .skills-content .column,
     background-color: rgba(255, 223, 0, 0.1); /* Subtle yellow glow */
     box-shadow: 0 0 10px rgba(255, 223, 0, 0.2); /* Optional: Glow effect */
 }
-
 .projects {
     background-color: #f8f9fa;
+    padding: 20px;
 }
 
 .project-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px; /* Add spacing between cards */
     flex-wrap: wrap;
 }
 
 .project-card {
-    width: 30%; /* Adjust card width */
-    height: 400px; /* Fixed card height */
+    width: 100%; /* Default to full width */
+    max-width: 30%; /* Limit max width for larger screens */
+    height: 450px; /* Fixed card height */
     perspective: 1000px; /* Enables 3D flip effect */
     position: relative; /* Ensure children are positioned relative to this */
+    margin-bottom: 20px; /* Space between rows */
 }
 
 .project-card .card-front,
@@ -669,7 +671,7 @@ skills .skills-content .column,
 
 .project-card .card-front img {
     width: 100%;
-    height: 78%;
+    height: 75%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
@@ -677,7 +679,6 @@ skills .skills-content .column,
 .project-card .card-front h3 {
     margin-top: 10px;
     margin-left: 15px;
-    align-content: center;
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
     color: #333;
@@ -719,32 +720,18 @@ skills .skills-content .column,
     transform: rotateY(0deg); /* Show the back */
 }
 
-
-.project-card {
-    perspective: 1500px; /* Increase for a more natural look */
-}
-
 .project-card .card-front,
 .project-card .card-back {
     -webkit-backface-visibility: hidden; /* Safari and older browsers */
     backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transition: transform 0.6s ease;
     transition: transform 0.6s ease;
 }
-
-.project-card .card-front,
-.project-card .card-back {
-    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth easing */
-}
-
 
 /* Tech Stack Container */
 .tech-stack {
     display: flex;
     flex-wrap: wrap; /* Allow badges to wrap if there's no space */
-    margin-bottom: 10px;
     gap: 10px; /* Spacing between badges */
     margin-top: 10px; /* Spacing between title and tech stack */
     justify-content: center; /* Center align the badges */
@@ -762,23 +749,41 @@ skills .skills-content .column,
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
 }
 
-/* Hover Effect for Badges */
 .tech-stack span:hover {
     background-color: #21e4ef; /* Change background on hover */
     transform: scale(1.1); /* Slightly enlarge */
     cursor: pointer; /* Pointer cursor on hover */
 }
 
-@media (max-width: 768px) {
-    .tech-stack {
-        justify-content: flex-start; /* Align badges to the left on smaller screens */
+/* Responsive Design */
+@media (max-width: 1230px) {
+    .project-card {
+        max-width: 45%; /* Adjust card size for tablets */
     }
+}
 
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 100%; /* Full width on small screens */
+    }
+    
     .tech-stack span {
         font-size: 10px; /* Smaller text for badges */
         padding: 4px 8px; /* Smaller padding */
     }
 }
+
+@media (max-width: 480px) {
+    .project-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .project-card {
+        max-width: 90%; /* Slight margin for smaller devices */
+    }
+}
+
 
 /* Achievements Container */
 .achievements-container {
@@ -952,11 +957,3 @@ skills .skills-content .column,
     color: rgb(21, 228, 239);
 }
 
-
-@media (max-width: 768px) {
-    .home {
-        background: url("images/banner.jpg") no-repeat center center;
-        background-size: contain; /* Ensure the image fits within the container */
-        height: 80vh; /* Adjust the height for smaller screens */
-    }
-}
