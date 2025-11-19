@@ -210,10 +210,17 @@ code {
     background: url("images/banner.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
-    min-height: 300px;
+    min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .home {
+        background-attachment: scroll;
+        min-height: 100vh;
+    }
 }
 .home .max-width{
   width: 100%;
@@ -228,15 +235,27 @@ code {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 10%; /* Adjust this value to move the content up or down */
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+    width: 90%;
+}
   
 
 .home .home-content {
     text-align: center;
-    margin-top: -50px; /* Adjust this value to move the content up */
+    margin-top: -50px;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .home .home-content {
+        margin-top: 0;
+    }
+    
+    .home .max-width .row {
+        top: 50%;
+    }
 }
 
 .home .home-content .text-1{
@@ -310,11 +329,10 @@ code {
 
 @media (max-width: 900px) {
     .experience-badge {
-        position: relative;
-        top: auto;
-        left: auto;
+        position: static;
         display: inline-block;
         margin-bottom: 15px;
+        margin-top: 0;
     }
 }
 
@@ -386,8 +404,46 @@ code {
 }
 
 @media (max-width: 900px) {
+    .Experience .about-experience {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+    
     .Experience .about-experience .left {
         margin-top: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .Experience .about-experience .right {
+        width: 100%;
+        padding: 10px 5px;
+    }
+    
+    .Experience .about-experience .right p {
+        text-align: left;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        padding: 0 5px;
+    }
+    
+    .Experience .about-experience .right .text {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    
+    .Experience .about-experience .right .text1 {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    code {
+        font-size: 11px;
+        padding: 2px 4px;
     }
 }
 .Experience .about-experience .left img {
@@ -729,14 +785,18 @@ code {
         margin: 20px 0;
         font-size: 25px;
     }
+    .home .home-content .text-1{
+        font-size: 14px;
+    }
     .home .home-content .text-2{
-        font-size: 70px;
+        font-size: 50px;
     }
     .home .home-content .text-3{
-        font-size: 35px;
+        font-size: 18px;
     }
     .max-width{
         max-width: 930px;
+        padding: 0 30px;
     }
     .about .about-content .column{
         width: 100%;
@@ -772,31 +832,99 @@ code {
 
 @media (max-width: 690px) {
     .max-width{
-        padding: 0 25px;
+        padding: 0 20px;
     }
+    
+    .home .home-content .text-1{
+        font-size: 13px;
+    }
+    
     .home .home-content .text-2{
-        font-size: 60px;
+        font-size: 45px;
     }
     .home .home-content .text-3{
-        font-size: 32px;
+        font-size: 18px;
     }
 
     .services .serv-content .card{
         width: 100%;
     }
+    
+    .Experience .about-experience .left img {
+        height: 130px;
+        width: 130px;
+    }
 }
 
 @media (max-width: 500px) {
+    .home {
+        min-height: 100vh;
+        background-position: center center;
+    }
+    
+    .home .max-width .row {
+        top: 50%;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .home .home-content .text-1{
+        font-size: 13px;
+    }
+    
     .home .home-content .text-2{
-        font-size: 50px;
+        font-size: 40px;
+        line-height: 1.2;
     }
     .home .home-content .text-3{
-        font-size: 27px;
+        font-size: 16px;
     }
+    
+    .about .about-content .left img{
+        height: 280px;
+        width: 280px;
+    }
+    
     .about .about-content .right .text,
     .Experience .about-experience .right .text{
-        font-size: 19px;
+        font-size: 18px;
     }
+    
+    .Experience .about-experience {
+        padding: 15px 10px;
+    }
+    
+    .Experience .about-experience .left img {
+        height: 110px;
+        width: 110px;
+    }
+    
+    .Experience .about-experience .right {
+        padding: 5px;
+    }
+    
+    .Experience .about-experience .right .text {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .Experience .about-experience .right .text1 {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+    
+    .Experience .about-experience .right p {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+    
+    code {
+        font-size: 10px;
+        padding: 1px 3px;
+    }
+    
     .contact .right form .fields{
         flex-direction: column;
     }
@@ -814,6 +942,14 @@ code {
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .max-width {
+        padding: 0 20px;
     }
 }
 
@@ -1015,9 +1151,105 @@ code {
 }
 
 @media (max-width: 768px) {
+    .achievements {
+        padding: 80px 15px;
+    }
+    
     .spotlight-carousel {
         padding: 0 50px;
+        max-width: 100%;
     }
+    
+    .spotlight-wrapper {
+        width: 100%;
+    }
+    
+    .spotlight-item {
+        width: 100%;
+        min-width: 100%;
+        padding: 10px;
+    }
+    
+    .award-frame {
+        max-width: none;
+        width: auto;
+        padding: 15px;
+        margin: 0 15px;
+    }
+    
+    .spotlight-item img {
+        height: 200px;
+        width: 100%;
+    }
+    
+    .award-info {
+        padding: 15px 10px 10px 10px;
+    }
+    
+    .award-info h3 {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+    
+    .award-info p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievements {
+        padding: 60px 10px;
+    }
+    
+    .spotlight-carousel {
+        padding: 0 45px;
+        max-width: 100%;
+    }
+    
+    .spotlight-wrapper {
+        width: 100%;
+    }
+    
+    .spotlight-item {
+        padding: 5px;
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .award-frame {
+        padding: 12px;
+        max-width: none;
+        width: auto;
+        margin: 0 10px;
+    }
+    
+    .spotlight-item img {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .award-info {
+        padding: 12px 8px 8px 8px;
+    }
+    
+    .award-info h3 {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    
+    .award-info p {
+        font-size: 12px;
+    }
+    
+    .spotlight-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .prev { left: 5px; }
+    .next { right: 5px; }
 }
 
 .spotlight-track {
@@ -1047,6 +1279,14 @@ code {
     margin-top: -40px;
     margin-bottom: 40px;
     font-family: 'Poppins', sans-serif;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .achievements-subtitle {
+        font-size: 13px;
+        line-height: 1.6;
+    }
 }
 
 .award-frame {
