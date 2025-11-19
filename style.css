@@ -1412,35 +1412,41 @@ code {
 /* Individual Achievement Item */
 .gallery-item {
     text-align: center;
-    max-width: 500px;
-    flex: 1 1 220px;
+    max-width: 400px;
+    flex: 1 1 280px;
     background-color: #1a1f2e;
     border-radius: 16px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(102, 126, 234, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery-item h3 {
     color: #e5e7eb;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 
 .gallery-item img {
-    width: 100%; /* Ensures the image scales with the container */
-    height: 250px; /* Set a fixed height for consistency */
-    object-fit: cover; /* Crops the image to fit the dimensions */
-    max-height: 250px; /* Limit the maximum height */
-    border-radius: 8px; /* Add slight rounding to images */
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
     margin-bottom: 10px;
-    cursor: pointer; /* Show pointer on hover */
+    cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    background: #1a1f2e;
+    padding: 10px;
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.02);
+    opacity: 0.95;
 }
 
 /* Hover Effects */
@@ -1466,20 +1472,37 @@ code {
 
 @media (max-width: 768px) {
     .gallery-container {
-        gap: 20px; /* Reduce gap on smaller screens */
+        gap: 20px;
     }
 
     .gallery-item {
-        max-width: 180px; /* Smaller width for narrow screens */
-        padding: 10px;
+        max-width: 100%;
+        flex: 1 1 100%;
+        padding: 15px;
     }
 
     .gallery-item img {
-        max-height: 100px; /* Adjust image size */
+        max-height: 250px;
+        padding: 8px;
     }
 
     .gallery-item h3 {
-        font-size: 16px; /* Reduce font size */
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        padding: 12px;
+    }
+    
+    .gallery-item img {
+        max-height: 220px;
+        padding: 8px;
+    }
+    
+    .gallery-item h3 {
+        font-size: 15px;
     }
 }
 
