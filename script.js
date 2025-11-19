@@ -92,30 +92,46 @@ $(document).ready(function () {
     let current = 0;
 
     function updateSpotlight() {
+        if (!track || items.length === 0) return;
+        
         items.forEach((item, i) => {
             item.classList.remove("active");
             if (i === current) item.classList.add("active");
         });
 
-        track.style.transform = `translateX(-${current * 100}%)`;
+        // Get the width of one item
+        const itemWidth = items[0].offsetWidth;
+        const translateValue = current * itemWidth;
+        
+        track.style.transform = `translateX(-${translateValue}px)`;
+        console.log(`Current: ${current}, Translate: -${translateValue}px`);
     }
 
     // Buttons
-    document.querySelector(".next").onclick = () => {
-        current = (current + 1) % items.length;
-        updateSpotlight();
-    };
+    const nextBtn = document.querySelector(".spotlight-btn.next");
+    const prevBtn = document.querySelector(".spotlight-btn.prev");
+    
+    if (nextBtn) {
+        nextBtn.onclick = () => {
+            current = (current + 1) % items.length;
+            updateSpotlight();
+        };
+    }
 
-    document.querySelector(".prev").onclick = () => {
-        current = (current - 1 + items.length) % items.length;
-        updateSpotlight();
-    };
+    if (prevBtn) {
+        prevBtn.onclick = () => {
+            current = (current - 1 + items.length) % items.length;
+            updateSpotlight();
+        };
+    }
 
     // Auto-rotate (every 3 seconds)
-    setInterval(() => {
-        current = (current + 1) % items.length;
-        updateSpotlight();
-    }, 2500);
+    if (track && items.length > 0) {
+        setInterval(() => {
+            current = (current + 1) % items.length;
+            updateSpotlight();
+        }, 2500);
+    }
 
     // Typing text animation
     new Typed(".typing", {
