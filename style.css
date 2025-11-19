@@ -392,6 +392,7 @@ code {
 .Experience .about-experience .right {
     flex: 1;
     min-width: 0;
+    padding-left: 75px;
     position: relative;
 }
 .Experience .about-experience .right .text {
