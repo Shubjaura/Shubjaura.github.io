@@ -84,6 +84,39 @@ $(document).ready(function () {
     $(window).on("scroll", highlightNavbar);
     highlightNavbar();
 
+    /* ------------------------------------
+    Spotlight Awards Carousel
+    ------------------------------------ */
+    const track = document.querySelector(".spotlight-track");
+    const items = document.querySelectorAll(".spotlight-item");
+    let current = 0;
+
+    function updateSpotlight() {
+        items.forEach((item, i) => {
+            item.classList.remove("active");
+            if (i === current) item.classList.add("active");
+        });
+
+        track.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    // Buttons
+    document.querySelector(".next").onclick = () => {
+        current = (current + 1) % items.length;
+        updateSpotlight();
+    };
+
+    document.querySelector(".prev").onclick = () => {
+        current = (current - 1 + items.length) % items.length;
+        updateSpotlight();
+    };
+
+    // Auto-rotate (every 3 seconds)
+    setInterval(() => {
+        current = (current + 1) % items.length;
+        updateSpotlight();
+    }, 2500);
+
     // Typing text animation
     new Typed(".typing", {
         strings: ["Computer Engineer", "Schulich Scholar", "Programming Enthusiast"],
@@ -112,4 +145,5 @@ $(document).ready(function () {
             1000: { items: 3, nav: false }
         }
     });
+    
 });

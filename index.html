@@ -34,7 +34,7 @@
                 <li><a href="#Experience" class="menu-btn">Experience</a></li>
                 <li><a href="#projects" class="menu-btn">Projects</a></li>
                 <li><a href="#achievements" class="menu-btn">Achievements</a></li>
-                <li><a href="#gallery" class="menu-btn">Gallery</a></li>
+                <li><a href="#gallery" class="menu-btn">Paintings</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -80,13 +80,32 @@
     </section>
 
 
-    <!-- about section start -->
+    <!-- Experience -->
     <section class="Experience" id="Experience">
         <div class="max-width">
             <h2 class="title">Experience</h2>
+
             <div class="about-experience">
                 <div class="column left">
-                    <img src="images/Scotiabank.jpeg" alt="">
+                    <img src="images/amazon_logo_1.jpg" alt="Amazon logo">
+                </div>
+                <div class="column right">
+                    <div class="bulb-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="text">Software Engineer</div>
+                    <div class="text1">Amazon, Vancouver &emsp; Jun 2025 - Present</div>
+                    <br>
+                    <p style="margin-bottom: 10px;">
+                        1.&emsp; <code>// TODO: publish details once deployed to production</code>
+                        PS: Still Cooking!!
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-experience">
+                <div class="column left">
+                    <img src="images/Scotiabank.jpeg" alt="Scotiabank logo">
                 </div>
                 <div class="column right">
                     <div class="bulb-icon">
@@ -95,33 +114,50 @@
                     <div class="text">Data Scientist</div>
                     <div class="text1">Scotiabank, Toronto &emsp; Aug 2024 - Dec 2024</div>
                     <br>
-                    <p style="margin-bottom: 10px;"> 1. &emsp; Designed and implemented a scalable <code>RAG chatbot</code> leveraging  Google's LLM <code>Gemini Pro 1.5</code> and <code>Vertex AI</code>, integrating distributed processing with PySpark to deliver high-performance NLP solutions that offer low latency. </p>
-                    <p style="margin-bottom: 10px;"> 2.  &emsp; Leveraged <code>GCP BigQuery, SQL,</code> and <code>Python</code> to extract financial data and applied <code>prompt engineering (few-shot, contextual)</code> with Gemini Pro fine-tuning to generate high-quality financial summaries. </p>
-                    <p style="margin-bottom: 20px;"> 3. &emsp; Leveraged multi-threading with <code>ThreadPoolExecutor</code> to parallelize summary generation, reducing time by 40% </p>
+                    <p style="margin-bottom: 10px;">
+                        1.&emsp;Designed and implemented a scalable <code>RAG chatbot</code> leveraging Google's LLM
+                        <code>Gemini Pro 1.5</code> and <code>Vertex AI</code>, integrating distributed processing with
+                        <code>PySpark</code> to deliver high-performance NLP solutions that offer low latency.
+                    </p>
+                    <p style="margin-bottom: 10px;">
+                        2.&emsp;Leveraged <code>GCP BigQuery</code>, <code>SQL</code>, and <code>Python</code> to
+                        extract financial data and applied <code>prompt engineering (few-shot, contextual)</code> with
+                        Gemini Pro fine-tuning to generate high-quality financial summaries.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        3.&emsp;Leveraged multi-threading with <code>ThreadPoolExecutor</code> to parallelize summary
+                        generation, reducing time by 40%.
                     </p>
                 </div>
             </div>
 
             <div class="about-experience">
                 <div class="column left">
-                    <img src="images/RBC.jpg" alt="">
+                    <img src="images/RBC.jpg" alt="RBC logo">
                 </div>
                 <div class="column right">
                     <div class="bulb-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="text">Data Insights Analyst </div>
+                    <div class="text">Data Insights Analyst</div>
                     <div class="text1">Royal Bank of Canada, Toronto &emsp; May 2024 - Aug 2024</div>
                     <br>
-                    <p style="margin-bottom: 10px;"> 1. &emsp; Innovatively used <code>MiniLM</code> (Pre-trained Transformers) to develop an <code>embedding & retrieval system</code> , enhancing the extraction of financial records based on clustering and improving data processing efficiency.</p>
-                    <p style="margin-bottom: 20px;"> 2. &emsp; Engineered a real-time <code>Tableau</code> Contractors Dashboard by integrating multi-source data, managing end to end project, using <code>pandas</code> for data cleaning and resulting in 100% automated processes.</p>
+                    <p style="margin-bottom: 10px;">
+                        1.&emsp;Innovatively used <code>MiniLM</code> (Pre-trained Transformers) to develop an
+                        <code>embedding &amp; retrieval system</code>, enhancing the extraction of financial records
+                        based on clustering and improving data processing efficiency.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        2.&emsp;Engineered a real-time <code>Tableau</code> Contractors Dashboard by integrating
+                        multi-source data, managing end-to-end project delivery, using <code>pandas</code> for data
+                        cleaning and resulting in 100% automated processes.
+                    </p>
                 </div>
             </div>
 
-
             <div class="about-experience">
                 <div class="column left">
-                    <img src="images/UofA.jpg" alt="">
+                    <img src="images/UofA.jpg" alt="University of Alberta logo">
                 </div>
                 <div class="column right">
                     <div class="bulb-icon">
@@ -130,47 +166,74 @@
                     <div class="text">ML Research Student</div>
                     <div class="text1">University of Alberta &emsp; Sep 2023 - April 2024</div>
                     <br>
-                    <p style="margin-bottom: 10px;"> 1. &emsp; Engineered a <code>Temporal Convolutional Neural Network</code> (TCNN) in <code>Python</code> to analyze <code>NASA</code> turbofan engine sensor data, achieving a <code>30.87% MAPE</code> and demonstrating expertise in time-series modeling.</p>
-                    <p style="margin-bottom: 20px;"> 2. &emsp; Optimized hyperparameters using <code>TensorFlow, Scikit-Learn, and Optuna</code>, reducing training time by <code>60%</code> and MAPE by <code>12%</code>, ensuring model scalability and efficiency.</p>
+                    <p style="margin-bottom: 10px;">
+                        1.&emsp;Engineered a <code>Temporal Convolutional Neural Network</code> (TCNN) in
+                        <code>Python</code> to analyze <code>NASA</code> turbofan engine sensor data, achieving a
+                        <code>30.87% MAPE</code> and demonstrating expertise in time-series modeling.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        2.&emsp;Optimized hyperparameters using <code>TensorFlow</code>, <code>Scikit-Learn</code>, and
+                        <code>Optuna</code>, reducing training time by <code>60%</code> and MAPE by <code>12%</code>,
+                        ensuring model scalability and efficiency.
+                    </p>
                 </div>
             </div>
 
             <div class="about-experience">
                 <div class="column left">
-                    <img src="images/ATCO.jpeg" alt="">
+                    <img src="images/ATCO.jpeg" alt="ATCO logo">
                 </div>
                 <div class="column right">
                     <div class="bulb-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="text">Software Engineer </div>
+                    <div class="text">Software Engineer</div>
                     <div class="text1">ATCO Ltd &emsp; Jan 2023 - Aug 2023</div>
                     <br>
-                    <p style="margin-bottom: 5px;"> 1. &emsp; Created a <code>full-stack</code> web application using <code>Flask, React, HTML, CSS, </code> and <code> RESTful APIs</code> facilitating file uploads and data input to automate cost savings calculations. Reduced manual processing by 30%. 
-                    <p style="margin-bottom: 5px;"> 2. &emsp; Designed and optimized complex <code>SQL</code> queries in <code>Oracle ADW</code>, streamlining asset management analysis.</p> 
-                    <p style="margin-bottom: 5px;"> 3. &emsp; Developed 5+ <code>PowerBI</code> dashboards to enhance data visibility by performing <code>data modeling and wrangling</code>.</p>
+                    <p style="margin-bottom: 5px;">
+                        1.&emsp;Created a <code>full-stack</code> web application using <code>Flask</code>,
+                        <code>React</code>, <code>HTML</code>, <code>CSS</code>, and <code>RESTful APIs</code> to
+                        automate cost-savings calculations, reducing manual processing by 30%.
+                    </p>
+                    <p style="margin-bottom: 5px;">
+                        2.&emsp;Designed and optimized complex <code>SQL</code> queries in <code>Oracle ADW</code>,
+                        streamlining asset management analysis.
+                    </p>
+                    <p style="margin-bottom: 5px;">
+                        3.&emsp;Developed 5+ <code>PowerBI</code> dashboards to enhance data visibility through
+                        <code>data modeling</code> and <code>wrangling</code>.
+                    </p>
                 </div>
             </div>
 
             <div class="about-experience">
                 <div class="column left">
-                    <img src="images/ONEinsurance.jpeg" alt="">
+                    <img src="images/ONEinsurance.jpeg" alt="ONE Insurance logo">
                 </div>
                 <div class="column right">
                     <div class="bulb-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="text">Data Engineer </div>
+                    <div class="text">Data Engineer</div>
                     <div class="text1">ONE Insurance &emsp; May 2022 - Aug 2022</div>
                     <br>
-                    <p style="margin-bottom: 5px;"> 1. &emsp; Architected and implemented an end-to-end <code>ETL pipeline</code> on cloud leveraging <Code>Azure Blob Storage</Code> and <code>Azure SDK</code>.</p> 
-                    <p style="margin-bottom: 5px;"> 2. &emsp; Generated <code>PowerBI</code> reports, leading to <code>$30,000</code> in annual cost savings by optimizing operational efficiency</p> 
-                    <p style="margin-bottom: 5px;"> 3. &emsp; Developed <code>Python</code> automation script to extract data from legacy system and upload to cloud via access key</p>
+                    <p style="margin-bottom: 5px;">
+                        1.&emsp;Architected and implemented an end-to-end <code>ETL pipeline</code> on cloud leveraging
+                        <code>Azure Blob Storage</code> and <code>Azure SDK</code>.
+                    </p>
+                    <p style="margin-bottom: 5px;">
+                        2.&emsp;Generated <code>PowerBI</code> reports, leading to <code>$30,000</code> in annual cost
+                        savings by optimizing operational efficiency.
+                    </p>
+                    <p style="margin-bottom: 5px;">
+                        3.&emsp;Developed <code>Python</code> automation scripts to extract data from legacy systems and
+                        upload to cloud via access key.
+                    </p>
                 </div>
             </div>
-            
         </div>
     </section>
+
 
     <section class="projects" id="projects">
         <div class="max-width">
@@ -239,44 +302,54 @@
         </div>
     </section>
     
-    <section class="achievements" id="achievements">
-        <div class="max-width">
-            <h2 class="title">Achievements</h2>
-            <div class="achievements-container">
+    <!-- ACHIEVEMENTS (APPLE SPOTLIGHT) -->
+    <section id="achievements" class="achievements">
+        <h2 class="title">Achievements</h2>
+
+        <div class="spotlight-carousel">
+
+            <div class="spotlight-track">
+
                 <!-- Award 1 -->
-                <div class="achievement-item">
-                    <img src="images/terryfoxaward.jpg" alt="Terry Fox Humanitarian Award">
+                <div class="spotlight-item active">
+                    <img src="images/terryfoxaward.jpg" />
                     <h3>Terry Fox Humanitarian Award</h3>
-                    <p class="description">Recognizes humanitarian service and academic excellence.</p>
-                    <p class="amount">Value: $28,000</p>
+                    <p>Value: $28,000</p>
                 </div>
 
-                <div class="achievement-item">
-                    <img src="images/governorgeneralmedal.jpg" alt="Governor General Academic Medal">
+                <!-- Award 2 -->
+                <div class="spotlight-item">
+                    <img src="images/governorgeneralmedal.jpg" />
                     <h3>Governor General Academic Medal</h3>
-                    <p class="description">Recognizes the highest academic achievement at a Canadian educational institution.</p>
+                    <p>Highest academic achievement in Canada.</p>
                 </div>
-                                
-                <div class="achievement-item">
-                    <img src="images/sl.jpeg" alt="Schulich Award">
+
+                <!-- Award 3 -->
+                <div class="spotlight-item">
+                    <img src="images/sl.jpeg" />
                     <h3>Schulich Leader Award</h3>
-                    <p class="description">Prestigious scholarship for innovative and entrepreneurial leadership in STEM fields.</p>
-                    <p class="amount">Value: $100,000</p>
+                    <p>Value: $100,000</p>
                 </div>
-                <div class="achievement-item">
-                    <img src="images/queenaward.jpg" alt="Queen Elizabeth II Platinum Jubilee Medal">
+
+                <!-- Award 4 -->
+                <div class="spotlight-item">
+                    <img src="images/queenaward.jpg" />
                     <h3>Queen Elizabeth II Platinum Jubilee Medal</h3>
-                    <p class="description">Awarded for outstanding service and dedication to community or Canada.</p>
+                    <p>Service to Canada.</p>
                 </div>
+
             </div>
+
+            <button class="spotlight-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="spotlight-btn next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
+
     <section class="gallery" id="gallery">
         <div class="max-width">
-            <h2 class="title">Gallery</h2>
+            <h2 class="title">Canvas Paintings</h2>
             <div class="gallery-container">
-                <!-- Award 1 -->
                 <div class="gallery-item">
                     <img src="images/Picture1.jpg" alt="Lord Ganesh Canvas Painting">
                     <h3>Lord Ganesh Canvas</h3>
