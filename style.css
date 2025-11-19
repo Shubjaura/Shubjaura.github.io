@@ -6,14 +6,16 @@
     --primary-dark: #00a8cc;
     --secondary-color: #6366f1;
     --accent-color: #f59e0b;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
-    --bg-white: #ffffff;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --text-dark: #e5e7eb;
+    --text-light: #9ca3af;
+    --bg-dark: #0f1419;
+    --bg-darker: #0a0e13;
+    --bg-card: #1a1f2e;
+    --bg-card-hover: #252b3b;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.7);
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -28,20 +30,25 @@
 html{
     scroll-behavior: smooth;
 }
+body {
+    background-color: #0f1419;
+    color: #e5e7eb;
+}
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #0a0e13;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
 /* all similar content styling codes */
@@ -94,15 +101,20 @@ section .title::after{
     font-size: 20px;
     color: transparent;
     padding: 0 5px;
-    background: #fff;
+    background: #0f1419;
     transform: translateX(-50%);
 }
+
+section .title {
+    color: #e5e7eb;
+}
 code {
-            color: #d63384; /* Set text color */
-            background-color: #f8f9fa; /* Optional: Add background color */
-            padding: 2px 4px; /* Optional: Add padding */
-            border-radius: 3px; /* Optional: Add rounded corners */
-            font-family: Consolas, "Courier New", monospace; /* Set font to monospace */
+            color: #00d4ff;
+            background-color: rgba(102, 126, 234, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, "Courier New", monospace;
+            border: 1px solid rgba(102, 126, 234, 0.3);
 }
 
 /* navbar styling */
@@ -272,13 +284,13 @@ code {
 
 .about .about-content .right p{
     font-size: 15px;
-    color: rgb(196, 202, 203);
+    color: #d1d5db;
     text-align: justify;
 }
 
 /* EXPERIENCE */
 .Experience {
-    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+    background: #0c1014;
 }
 
 /* Experience Badge Styling */
@@ -324,12 +336,13 @@ code {
     margin-bottom: 30px;
     padding: 28px;
     border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    background: #1a1f2e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.2);
     overflow: hidden;
+    z-index: 1;
 }
 
 .Experience .about-experience::before {
@@ -358,8 +371,9 @@ code {
 
 .Experience .about-experience:hover {
     transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
-    border-color: rgba(102, 126, 234, 0.2);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.4);
+    background: #252b3b;
 }
 .Experience .about-experience .left {
     width: 180px;
@@ -381,13 +395,15 @@ code {
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid rgba(15, 23, 42, 0.08);
+    border: 4px solid rgba(102, 126, 234, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background: transparent;
 }
 .Experience .about-experience:hover .left img {
     transform: scale(1.08) rotate(3deg);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
+    border-color: rgba(85, 107, 206, 0.6);
 }
 .Experience .about-experience .right {
     flex: 1;
@@ -397,17 +413,17 @@ code {
 }
 .Experience .about-experience .right .text {
     font-size: 26px;
-    color: #111827;
+    color: #e5e7eb;
     font-weight: 600;
 }
 .Experience .about-experience .right .text1 {
     font-size: 14px;
-    color: #6b7280;
+    color: #9ca3af;
     margin-top: 4px;
 }
 .Experience .about-experience .right p {
     font-size: 14px;
-    color: #111827;
+    color: #d1d5db;
     text-align: left;
     line-height: 1.6;
 }
@@ -447,7 +463,7 @@ code {
 /* services section styling */
 .contact, .about{
     color:#fff;
-    background: rgb(56, 53, 53);
+    background: #0a0e13;
 }
 
 .education{
@@ -537,17 +553,20 @@ code {
 .contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
-    border: 1px solid lightgrey;
+    border: 1px solid rgba(102, 126, 234, 0.3);
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
+    background: #1a1f2e;
+    color: #e5e7eb;
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
+    border-color: rgba(102, 126, 234, 0.6);
+    background: #252b3b;
 }
 .contact .right form .textarea textarea{
   padding-top: 10px;
@@ -730,40 +749,9 @@ code {
     }
 }
 
-.Experience .about-experience {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
-    transform-origin: center; /* Keeps scaling centered */
-}
+/* Removed duplicate styling - consolidated above */
 
-.Experience .about-experience:hover {
-    transform: scale(1.03); /* Slight enlargement without affecting layout */
-    background-color: #ffffff; /* Brighter but subtle */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer shadow */
-    cursor: pointer; /* Pointer cursor */
-}
-
-.Experience .about-experience .left img {
-    transition: transform 0.3s ease; /* Smooth image scaling */
-}
-
-.Experience .about-experience:hover .left img {
-    transform: scale(1.08); /* Subtle image zoom */
-}
-
-.Experience .about-experience {
-    padding: 20px;
-    border-radius: 10px; /* Optional: Rounded corners for a modern look */
-}
-
-.Experience .about-experience {
-    background-color: #f8f9fa; /* Default color */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.Experience .about-experience:hover {
-    background-color: #ffffff; /* Subtle brightness on hover */
-    background-image: linear-gradient(120deg, #ffffff, #f9f9f9);
-}
+/* Removed duplicate styling - already handled above */
 
 .about-experience {
     position: relative; /* For positioning the bulb icon */
@@ -774,15 +762,17 @@ code {
 
 /* Removed yellow glow effect on hover */
 .projects {
-    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+    background: #0c1014;
     padding: 100px 20px;
 }
 
 .project-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Add spacing between cards */
+    gap: 20px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 
 .project-card {
@@ -807,9 +797,9 @@ code {
 }
 
 .project-card .card-front {
-    background-color: #fff;
+    background: #1a1f2e;
     z-index: 2;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 .project-card .card-front img {
@@ -824,7 +814,7 @@ code {
     margin-left: 15px;
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
-    color: #333;
+    color: #e5e7eb;
 }
 
 .project-card .card-back {
@@ -932,14 +922,16 @@ code {
 ------------------------------------ */
 .achievements {
     padding: 100px 0;
-    background: #ffffff;
+    background:  #0c1014;
 }
 
 .spotlight-carousel {
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
     margin: auto;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .spotlight-track {
@@ -951,9 +943,9 @@ code {
     width: 100%;
     flex-shrink: 0;
     text-align: center;
-    padding: 30px;
-    opacity: 0.4;
-    transform: scale(0.7);
+    padding: 20px;
+    opacity: 0.5;
+    transform: scale(0.85);
     transition: 0.5s;
 }
 
@@ -962,46 +954,85 @@ code {
     transform: scale(1);
 }
 
-.spotlight-item img {
-    width: 260px;
-    height: 260px;
-    object-fit: contain;
-    border-radius: 14px;
-    margin-bottom: 20px;
+.achievements-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #9ca3af;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.spotlight-item h3 {
+.award-frame {
+    background: #1a1f2e;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.spotlight-item.active .award-frame {
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+.spotlight-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0;
+}
+
+.award-info {
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+}
+
+.award-info h3 {
     font-size: 22px;
     font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #e5e7eb;
 }
 
-.spotlight-item p {
+.award-info p {
     font-size: 15px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #9ca3af;
+    margin: 0;
 }
 .spotlight-btn {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
-    background: white;
-    border: none;
+    background: #1a1f2e;
+    border: 2px solid rgba(102, 126, 234, 0.3);
     width: 45px;
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     transition: 0.3s;
+    color: #e5e7eb;
+    z-index: 10;
 }
 
 .spotlight-btn:hover {
-    background: #00eaff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    border-color: transparent;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev { left: -70px; }
+.next { right: -70px; }
+
+@media (max-width: 768px) {
+    .prev { left: 10px; }
+    .next { right: 10px; }
+}
 
 @media (max-width: 768px) {
     .achievements-container {
@@ -1028,17 +1059,19 @@ code {
 }
 
 .gallery {
-    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+    background: #0c1014;
 }
 
 
 /* Achievements Container */
 .gallery-container {
     display: flex;
-    flex-wrap: wrap; /* Wrap items to the next row on smaller screens */
-    gap: 30px; /* Space between items */
-    justify-content: center; /* Center-align items in the row */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
     padding-top: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Individual Achievement Item */
@@ -1046,12 +1079,16 @@ code {
     text-align: center;
     max-width: 500px;
     flex: 1 1 220px;
-    background-color: #ffffff;
+    background-color: #1a1f2e;
     border-radius: 16px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.gallery-item h3 {
+    color: #e5e7eb;
 }
 
 
@@ -1083,9 +1120,9 @@ code {
     margin-top: 40px;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    color: #333;
+    color: #9ca3af;
     line-height: 1.8;
-    font-style: italic; /* Make the font italic */
+    font-style: italic;
 }
 
 .gallery-poem p {
