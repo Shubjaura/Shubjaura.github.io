@@ -351,22 +351,22 @@
             <h2 class="title">Canvas Paintings</h2>
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/Picture1.jpg" alt="Lord Ganesh Canvas Painting">
+                    <img src="images/Picture1.jpg" alt="Lord Ganesh Canvas Painting" onclick="openLightbox(this)">
                     <h3>Lord Ganesh Canvas</h3>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="images/Picture4.jpg" alt="Bunnies and the Moon">
+                    <img src="images/Picture4.jpg" alt="Bunnies and the Moon" onclick="openLightbox(this)">
                     <h3>Bunnies and the Moon</h3>
                 </div>
                                 
                 <div class="gallery-item">
-                    <img src="images/Picture3.jpg" alt="Beauty and Bees">
+                    <img src="images/Picture3.jpg" alt="Beauty and Bees" onclick="openLightbox(this)">
                     <h3>Beauty and Bees</h3>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="images/Picture2.jpg" alt="Petals Canvas">
+                    <img src="images/Picture2.jpg" alt="Petals Canvas" onclick="openLightbox(this)">
                     <h3>Petals Canvas</h3>
                 </div>
             </div>
@@ -379,6 +379,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
     
     
     <!-- Education -->
@@ -444,7 +451,7 @@
                                 <textarea id="email_message" cols="30" rows="10" placeholder="Message.." required></textarea>
                             </div>
                             <div class="button-area">
-                                <button type = "submit" onclick="sendmail()">Send message</button>
+                                <button type="submit" onclick="sendmail()">Send message</button>
                             </div>
                         </form>
                     </div>

@@ -270,10 +270,12 @@ code {
     background-image: linear-gradient(120deg, #ffffff, #f3f4ff);
 }
 .Experience .about-experience .left {
-    width: 18%;
+    width: 180px;
     min-width: 150px;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 .Experience .about-experience .left img {
     height: 150px;
@@ -287,7 +289,8 @@ code {
     transform: scale(1.06);
 }
 .Experience .about-experience .right {
-    width: 78%;
+    flex: 1;
+    min-width: 0;
     position: relative;
 }
 .Experience .about-experience .right .text {
@@ -486,10 +489,30 @@ code {
         height: 350px;
         width: 350px;
     }
+}
 
-    .Experience .about-experience .left img{
-        height: 350px;
-        width: 350px;
+@media (max-width: 900px) {
+    .Experience .about-experience {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .Experience .about-experience .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .Experience .about-experience .right {
+        width: 100%;
+    }
+    
+    .Experience .about-experience .right p {
+        text-align: center;
+    }
+    
+    .bulb-icon {
+        top: 5px;
+        right: 5px;
     }
 }
 
@@ -549,18 +572,20 @@ code {
         flex: 100%;
     }
 
-    .Experience .about-experience .column{
+    .Experience .about-experience {
+        flex-direction: column;
+    }
+    
+    .Experience .about-experience .left{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .Experience .about-experience .right{
         width: 100%;
     }
-    .Experience .about-experience .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .Experience .about-experience .right{
-        flex: 100%;
-    }
-skills .skills-content .column,
+    
+    .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
@@ -964,6 +989,13 @@ skills .skills-content .column,
     max-height: 250px; /* Limit the maximum height */
     border-radius: 8px; /* Add slight rounding to images */
     margin-bottom: 10px;
+    cursor: pointer; /* Show pointer on hover */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 /* Hover Effects */
@@ -1013,5 +1045,67 @@ skills .skills-content .column,
 
 .navbar .menu li a:hover {
     color: rgb(21, 228, 239);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover {
+    color: rgb(21, 228, 239);
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
 }
 
