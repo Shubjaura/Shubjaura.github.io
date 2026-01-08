@@ -3,36 +3,57 @@ const paintingsData = [
     {
         id: 1,
         title: "Sunset over Vancouver",
-        medium: "oil", // used for filtering
-        mediumDisplay: "Oil on Canvas", // displayed text
+        medium: "BC Scenaries",
+        mediumDisplay: "Canvas", 
         size: "24x36 inches",
         year: 2024,
-        image: "../images/image_5f85fe.jpg", // Path to your image
+        image: "../images/Picture1.jpg", 
         status: "available",
-        price: "$450"
+        price: "$250"
     },
     {
         id: 2,
-        title: "Abstract Dreams",
-        medium: "acrylic",
-        mediumDisplay: "Acrylic on Wood",
+        title: "Lord Ganesh",
+        medium: "Random",
+        mediumDisplay: "Canvas",
         size: "18x24 inches",
         year: 2023,
-        image: "../images/image_5f865c.jpg",
+        image: "../images/Picture1.jpg",
         status: "sold",
         price: "Sold"
     },
-    // Add more painting objects here
     {
         id: 3,
-        title: "Neon City",
-        medium: "digital",
-        mediumDisplay: "Digital Print",
+        title: "Bunnies and the Moon",
+        medium: "Random",
+        mediumDisplay: "Canvas",
         size: "A1",
         year: 2024,
-        image: "../images/image_5f85fe.jpg", // Placeholder
+        image: "../images/Picture4.jpg", 
         status: "available",
-        price: "$120"
+        price: "$100"
+    },
+        {
+        id: 3,
+        title: "Beauty and Bees",
+        medium: "Random",
+        mediumDisplay: "Canvas",
+        size: "A1",
+        year: 2024,
+        image: "../images/Picture3.jpg", // Placeholder
+        status: "available",
+        price: "$100"
+    },    
+    {
+        id: 3,
+        title: "Petals Canvas",
+        medium: "Random",
+        mediumDisplay: "Canvas",
+        size: "A1",
+        year: 2024,
+        image: "../images/Picture2.jpg", // Placeholder
+        status: "available",
+        price: "$100"
     }
 ];
 
