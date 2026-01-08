@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintings | Shubhkarman Jaura</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <nav class="navbar sticky">
+        <div class="max-width">
+            <div class="logo"><a href="../index.html">Shubh<span>.</span></a></div>
+            <ul class="menu">
+                <li><a href="../index.html#home" class="menu-btn">Home</a></li>
+                <li><a href="../index.html#about" class="menu-btn">About</a></li>
+                <li><a href="#" class="menu-btn active">Paintings</a></li> 
+                <li><a href="../index.html#contact" class="menu-btn">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gallery-section" id="paintings">
+        <div class="max-width">
+            <h2 class="title">My Artworks</h2>
+            <div class="gallery-intro">
+                <p>Exploring creativity through canvas and color.</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="oil">Oil</button>
+                <button class="filter-btn" data-filter="acrylic">Acrylic</button>
+                <button class="filter-btn" data-filter="available">Available</button>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                </div>
+        </div>
+    </section>
+
+    <div id="art-lightbox" class="lightbox">
+        <div class="lightbox-content-wrapper">
+            <span class="close-lightbox">&times;</span>
+            <img id="lightbox-img" src="" alt="Gallery Image">
+            <div class="lightbox-details">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // Minimal menu toggle logic tailored for this page
+        $('.menu-btn').click(function(){
+            $('.navbar .menu').toggleClass("active");
+            $('.menu-btn i').toggleClass("active");
+        });
+    </script>
+    <script src="gallery.js"></script>
+</body>
+</html>

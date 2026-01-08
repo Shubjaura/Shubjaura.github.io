@@ -1,0 +1,167 @@
+/* Inherit global variables from ../style.css, but add specific overrides */
+
+.gallery-section {
+    padding: 100px 0;
+    background-color: var(--bg-dark); /* Matches your main theme */
+    min-height: 100vh;
+}
+
+.gallery-intro {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Filter Buttons --- */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-dark);
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* --- The Grid Layout --- */
+.gallery-grid {
+    display: grid;
+    /* Auto-fit creates a responsive grid like the inspiration */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* --- Painting Card Component --- */
+.painting-card {
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.painting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.painting-image-container {
+    width: 100%;
+    height: 300px; /* Fixed height for uniformity */
+    overflow: hidden;
+}
+
+.painting-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the box cleanly */
+    transition: transform 0.5s ease;
+}
+
+.painting-card:hover .painting-image-container img {
+    transform: scale(1.05);
+}
+
+.painting-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.painting-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.painting-meta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.painting-status {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+}
+
+.painting-status.sold {
+    color: #ff6b6b;
+}
+
+.painting-status.available {
+    color: var(--primary-color);
+}
+
+/* --- Lightbox Improvements --- */
+.lightbox {
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content-wrapper {
+    text-align: center;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox img {
+    max-height: 80vh;
+    max-width: 100%;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.lightbox-details {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-lightbox:hover {
+    color: var(--primary-color);
+}

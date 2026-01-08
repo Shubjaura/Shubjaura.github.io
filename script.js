@@ -53,13 +53,22 @@ $(document).ready(function () {
     });
 
     $('.navbar .menu li a').click(function (event) {
-        event.preventDefault();
-        const targetId = $(this).attr("href");
-        $("html, body").animate(
-            { scrollTop: $(targetId).offset().top },
-            300, // Duration in ms
-            "easeInOutCubic" // Use linear for consistent speed or easeInOutCubic for smooth effect
-        );
+        const linkHref = $(this).attr("href");
+
+        // ONLY prevent default behavior if the link is a hashtag (internal scroll)
+        if (linkHref.startsWith("#")) {
+            event.preventDefault();
+            
+            // Check if the section actually exists before scrolling
+            if ($(linkHref).length) {
+                $("html, body").animate(
+                    { scrollTop: $(linkHref).offset().top },
+                    300, 
+                    "easeInOutCubic" 
+                );
+            }
+        }
+        // If it's "paintings/", the script ignores it, and the browser loads the page normally.
     });
     
 
