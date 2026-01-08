@@ -1,16 +1,17 @@
 // Data: The "State" of your gallery
 const paintingsData = [
+
     {
         id: 1,
-        title: "Sunset over Vancouver",
+        title: "City View",
         medium: "BC Scenaries",
         mediumDisplay: "Canvas", 
         size: "24x36 inches",
         year: 2024,
-        image: "../images/Picture1.jpg", 
+        image: "../images/CityView.jpeg", 
         status: "available",
         price: "$250"
-    },
+    },   
     {
         id: 2,
         title: "Lord Ganesh",
@@ -34,7 +35,7 @@ const paintingsData = [
         price: "$100"
     },
         {
-        id: 3,
+        id: 4,
         title: "Beauty and Bees",
         medium: "Random",
         mediumDisplay: "Canvas",
@@ -45,7 +46,7 @@ const paintingsData = [
         price: "$100"
     },    
     {
-        id: 3,
+        id: 5,
         title: "Petals Canvas",
         medium: "Random",
         mediumDisplay: "Canvas",
@@ -54,6 +55,61 @@ const paintingsData = [
         image: "../images/Picture2.jpg", // Placeholder
         status: "available",
         price: "$100"
+    },
+    {
+        id: 6,
+        title: "Ocean Abstract",
+        medium: "Random",
+        mediumDisplay: "Canvas", 
+        size: "24x36 inches",
+        year: 2024,
+        image: "../images/Ocean Abstract.jpeg", 
+        status: "available",
+        price: "$250"
+    },
+    {
+        id: 7,
+        title: "Sunset Abstract",
+        medium: "Random",
+        mediumDisplay: "Canvas", 
+        size: "24x36 inches",
+        year: 2024,
+        image: "../images/Sunset Abstract.jpeg", 
+        status: "available",
+        price: "$250"
+    },
+    {
+        id: 1,
+        title: "Vancouver Sealine",
+        medium: "BC Scenaries",
+        mediumDisplay: "Canvas", 
+        size: "24x36 inches",
+        year: 2024,
+        image: "../images/Vancouver Sealine.jpeg", 
+        status: "available",
+        price: "$250"
+    },
+    {
+        id: 1,
+        title: "Chilliwack Lake",
+        medium: "BC Scenaries",
+        mediumDisplay: "Canvas", 
+        size: "24x36 inches",
+        year: 2024,
+        image: "../images/Chilliwack Lake.jpeg", 
+        status: "available",
+        price: "$250"
+    },
+    {
+        id: 1,
+        title: "BC Hike",
+        medium: "BC Scenaries",
+        mediumDisplay: "Canvas", 
+        size: "24x36 inches",
+        year: 2024,
+        image: "../images/BC Hike.jpeg", 
+        status: "available",
+        price: "$250"
     }
 ];
 
